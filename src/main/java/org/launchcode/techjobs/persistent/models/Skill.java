@@ -32,4 +32,12 @@ public class Skill extends AbstractEntity {
     public void setDescription(@NotBlank(message = "Description cannot be blank") @Size(max = 255, message = "Description cannot be more than 255 characters") String description) {
         this.description = description;
     }
+    
+    public void addJob(Job job){
+        jobs.add(job);
+    }
+    
+    public List<Job> getJobs() {
+        return jobs;
+    }
 }
